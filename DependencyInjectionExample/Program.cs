@@ -1,6 +1,3 @@
-
-using DependencyInjectionExample.Services;
-
 namespace DependencyInjectionExample
 {
     public class Program

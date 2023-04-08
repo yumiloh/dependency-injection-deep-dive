@@ -2,6 +2,6 @@
 {
     public interface IWeatherForecast
     {
-        int TemperatureC { get; set; }
+        int Temperature { get; set; }
     }
 }
