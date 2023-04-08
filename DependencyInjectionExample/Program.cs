@@ -16,9 +16,9 @@ namespace DependencyInjectionExample
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //builder.Services.AddSingleton<IWeatherForecast, WeatherForecast>();
+            builder.Services.AddSingleton<IWeatherForecast, WeatherForecast>();
             //builder.Services.AddScoped<IWeatherForecast, WeatherForecast>();
-            builder.Services.AddTransient<IWeatherForecast, WeatherForecast>();
+            //builder.Services.AddTransient<IWeatherForecast, WeatherForecast>();
 
             var app = builder.Build();
 
