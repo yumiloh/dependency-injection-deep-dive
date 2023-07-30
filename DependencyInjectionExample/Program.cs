@@ -1,3 +1,6 @@
+using DependencyInjectionExample.Interfaces;
+using DependencyInjectionExample.Services;
+
 namespace DependencyInjectionExample
 {
     public class Program
@@ -14,8 +17,7 @@ namespace DependencyInjectionExample
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddSingleton<IWeatherForecast, WeatherForecast>();
-            //builder.Services.AddScoped<IWeatherForecast, WeatherForecast>();
-            //builder.Services.AddTransient<IWeatherForecast, WeatherForecast>();
+            builder.Services.AddSingleton<ITemperatureService, TemperatureService>();
 
             var app = builder.Build();
 

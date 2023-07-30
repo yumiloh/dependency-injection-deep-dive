@@ -1,4 +1,4 @@
-﻿namespace DependencyInjectionExample
+﻿namespace DependencyInjectionExample.Interfaces
 {
     public interface IWeatherForecast
     {

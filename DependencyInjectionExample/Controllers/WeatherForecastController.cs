@@ -1,3 +1,4 @@
+using DependencyInjectionExample.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DependencyInjectionExample.Controllers
