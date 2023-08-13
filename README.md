@@ -8,7 +8,7 @@ In this series I will attempt to explain how .NET dependency injection works fro
 
 Wait a sec... Register what? At where? Resolve what? What lifetime? 
 
-A lot of rudimentary concepts in programming can be explained in simple and plain language, but whenever dependency injection enters the conversation, suddenly all the terms surrounding it become ✨so fancy✨ at least that's what I thought when I first got acquainted with it. When I first heard of DI, I was wow-ed by its name. _Dependency injection_, huh? Gives a good roll of the tongue and make me sound very knowledgeable when I say it, but in reality I knew nothing about it back then 🤣
+A lot of rudimentary concepts in programming can be explained in simple and plain language, but whenever dependency injection enters the conversation, suddenly all the terms surrounding it become ✨so fancy✨ at least that's what I thought when I first got acquainted with it as a junior. When I first heard of DI, I was wow-ed by its name. _Dependency injection_, huh? Gives a good roll of the tongue and make me sound very knowledgeable when I say it, but in reality I knew nothing about it back then 🤣
 
 Hopefully this series will demystify DI at the end and make this topic clear as day the next time you think of it ;) 
 
