@@ -4,9 +4,9 @@
 
 Welcome to the Dependency Injection Deep Dive series!
 
-In this series I will attempt to explain how .NET dependency injection works from ground up. Perhaps you have heard of DI somewhere, but not exactly sure what the hell it does. Dependency injection itself already sounds fancy; sprinkle around a few more terms like service provider, service collection, singleton, scoped, or transient, and they will be floating around a newbie's head in confusion, not knowing what exactly they are and what exactly they do. Everything looks like magic. You _register_ it here, and it will _resolve the dependency_ according to the _lifetime_ you defined.
+In this series I will attempt to explain how .NET dependency injection works from ground up. Perhaps you have heard of DI somewhere, but not exactly sure what the hell it does. Dependency injection itself already sounds fancy; sprinkle around a few more terms like service provider, service collection, singleton, scoped, or transient, and they will be floating around a newbie's head in confusion, not knowing what exactly they are and what exactly they do. Everything looks like magic. You _register_ it here, and the _container_ will _resolve the dependency_ according to the _lifetime_ you defined.
 
-Wait a sec... Register what? At where? Resolve what? What lifetime? 
+Wait a sec... Register what? At where? Resolve what? A... container will give me what I ask for, and grant me three wishes, perhaps? 
 
 Regarding this topic, usually the more explanation is provided, the more confused I became. Okay, so you need to use _service collection_ to register it, and some _service provider_ will _resolve_ the dependency and the instance will be returned from the ether. Then, it gets _injected_ into the constructor, so the implementation gets _decoupled_ from the abstraction.
 
