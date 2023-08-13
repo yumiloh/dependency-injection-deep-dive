@@ -1,3 +1,5 @@
+using DependencyInjectionExample.Interfaces;
+using DependencyInjectionExample.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DependencyInjectionExample.Controllers
@@ -6,14 +8,13 @@ namespace DependencyInjectionExample.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private readonly IWeatherForecast _weatherForecast1;
-        private readonly IWeatherForecast _weatherForecast2;
+        private readonly TemperatureService _weatherForecast1;
+        //private readonly IWeatherForecast _weatherForecast2;
 
-        public WeatherForecastController(IWeatherForecast weatherForecast1,
-                                         IWeatherForecast weatherForecast2)
+        public WeatherForecastController(TemperatureService weatherForecast1)
         {
             _weatherForecast1 = weatherForecast1;
-            _weatherForecast2 = weatherForecast2;
+            //_weatherForecast2 = weatherForecast2;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -22,7 +23,7 @@ namespace DependencyInjectionExample.Controllers
             return Ok(new
             {
                 weatherForecast1 = _weatherForecast1,
-                weatherForecast2 = _weatherForecast2,
+                //weatherForecast2 = _weatherForecast2,
             });
         }
     }
