@@ -7,7 +7,7 @@ Using the same example from the first post, `WeatherForecast` has a dependency o
 
 The most straight-forward way to check what dependencies the service has is via the constructor [provided that you follow the best practices and don't use the service locator pattern ;) ] 
 
-![Alt text](image.png)
+![Alt text](assets/image.png)
 So from here we know that `WeatherForecast` depends on `TemperatureService`. 
 
 However, if we look at `Program.cs`:
