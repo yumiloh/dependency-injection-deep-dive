@@ -1,4 +1,5 @@
 using DependencyInjectionExample.Interfaces;
+using DependencyInjectionExample.Options;
 using DependencyInjectionExample.Services;
 
 namespace DependencyInjectionExample
@@ -8,18 +9,23 @@ namespace DependencyInjectionExample
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            //uncomment this to detect captive dependency in environments other than development
-            //builder.Host.UseDefaultServiceProvider(options => options.ValidateScopes = true);
-
+           
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            //where captive dependency occurs
-            builder.Services.AddScoped<IWeatherForecast, WeatherForecast>();
+            //you can register it this way
+            builder.Services.Configure<TemperatureOption>(builder.Configuration.GetSection("Temperature"));
+
+            //alternative
+            //difference is this way can call validateDataAnnotations()
+            builder.Services.AddOptions<TemperatureOption>().Bind(builder.Configuration.GetSection("Temperature"))
+                            .ValidateDataAnnotations()
+                            .ValidateOnStart();
+
             builder.Services.AddSingleton<ITemperatureService, TemperatureService>();
 
-            var app = builder.Build();
+            var app = builder.Build();  
 
             app.UseSwagger();
             app.UseSwaggerUI();

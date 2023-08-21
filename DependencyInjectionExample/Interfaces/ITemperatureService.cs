@@ -2,6 +2,7 @@
 {
     public interface ITemperatureService
     {
-        int TemperatureInFahrenheit { get; set; } 
+        public int MaximumTemperature { get; set; }
+        double GetTemperature();
     }
 }

@@ -7,14 +7,11 @@ namespace DependencyInjectionExample.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private readonly IWeatherForecast _weatherForecast1;
-        private readonly IWeatherForecast _weatherForecast2;
+        private readonly ITemperatureService _temperatureService;
 
-        public WeatherForecastController(IWeatherForecast weatherForecast1,
-                                         IWeatherForecast weatherForecast2)
+        public WeatherForecastController(ITemperatureService temperatureService)
         {
-            _weatherForecast1 = weatherForecast1;
-            _weatherForecast2 = weatherForecast2;
+            _temperatureService = temperatureService;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -22,8 +19,8 @@ namespace DependencyInjectionExample.Controllers
         {
             return Ok(new
             {
-                weatherForecast1 = _weatherForecast1,
-                weatherForecast2 = _weatherForecast2,
+                temperature = _temperatureService.GetTemperature(),
+                maximumTemperature = _temperatureService.MaximumTemperature
             });
         }
     }
