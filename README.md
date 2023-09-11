@@ -4,7 +4,7 @@
 
 Welcome to the Dependency Injection Deep Dive series!
 
-In this series I will attempt to explain how .NET dependency injection works from ground up. Perhaps you have heard of DI somewhere, but not exactly sure what the hell it does. Dependency injection itself already sounds fancy; sprinkle around a few more terms like service provider, service collection, singleton, scoped, or transient, and they will be floating around a newbie's head in confusion, not knowing what exactly they are and what exactly they do. Everything looks like magic. The explanation usually goes something like this: You don't want to create the dependencies yourself, so all you need to do is to _register_ the dependencies and the _container_ will resolve the dependencies you asked for and handle everything else. 
+In this series I will attempt to explain how .NET dependency injection works from ground up. Perhaps you have heard of DI, but not quite sure what exactly it is. Dependency injection itself already sounds fancy; sprinkle around a few more terms like service provider, service collection, singleton, scoped, or transient, and they will be floating around a newbie's head in confusion, not knowing what exactly they are and what exactly they do. Everything looks like magic. The explanation usually goes something like this: You don't want to create the dependencies yourself, so all you need to do is to _register_ the dependencies and the _container_ will resolve the dependencies you asked for and handle everything else. 
 
 Wait a sec... Register what? At where? Resolve what? A... container will give back what I asked for, and grant me three wishes, perhaps? 
 
