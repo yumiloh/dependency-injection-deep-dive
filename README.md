@@ -11,7 +11,7 @@ Regarding this topic, usually the more explanation is provided, the more confuse
 Service collection? I've never seen that anywhere. All I see is just `builder.Services.AddSingleton()`, apparently that's how we should register it? After that it will somehow automatically be _injected_ into the constructor? Those were just the tip of the confusion I had in the beginning. If you are facing similar woes, I hope this series will provide more clarity.
 
 
-##How to navigate
+## How to navigate
 I have decided to structure each part in different branches. The number in the branches show the sequence to the series. Currently it's still work in progress but I will update it continuously. 
 
 
